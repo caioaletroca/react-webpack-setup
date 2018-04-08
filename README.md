@@ -23,3 +23,17 @@ To generate android apk run:
 ```
 npm run build:cordova android
 ```
+
+## Development Hot Reload
+
+You may use [webpack-dev-server](https://github.com/webpack/webpack-dev-server) for hot reload development:
+
+```
+npm run serve
+```
+
+To test you app on the device with cordova, plug you phone with USB debugging turned on, and run the command:
+
+```
+npm run serve:cordova android
+```
