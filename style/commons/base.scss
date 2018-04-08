@@ -1,0 +1,15 @@
+@import '../themes/default.scss';
+@import '../vendor-styles.scss';
+@import '../media-queries.scss';
+
+html,
+body,
+#app,
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	font-family: Arial;
+}

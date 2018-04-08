@@ -1,0 +1,19 @@
+//Media Queries Sizes
+$mobile1: 360px;
+$mobile2: 512px;
+$desktop860: 860px;
+$desktop1: 1024px;
+$desktop2: 1280px;
+$desktop3: 1500px;
+
+@mixin media($media) {
+	@media only screen and (max-device-width: $media) {
+		@content;
+	}
+}
+
+@mixin media-desktop($media) {
+	@media (max-width: $media) {
+		@content;
+	}
+}

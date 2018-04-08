@@ -1,0 +1,50 @@
+//Flex Properties
+@mixin display($value) {
+	@if $value == 'flex' {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: flex;
+	}
+	@else {
+		display: $value;
+	}
+}
+
+@mixin flex($flex_value) {
+	-webkit-flex: $flex_value;
+	   -moz-flex: $flex_value;
+		-ms-flex: $flex_value;
+			flex: $flex_value;
+}
+
+@mixin flex-direction($direction) {
+	-webkit-flex-direction: $direction;
+	   -moz-flex-direction: $direction;
+	   	-ms-flex-direction: $direction;
+			flex-direction: $direction;
+}
+
+//Style Properties
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius !important;
+	   -moz-border-radius: $radius !important;
+	   	-ms-border-radius: $radius !important;
+			border-radius: $radius !important;
+}
+
+//Image Filters
+@mixin filter($filter) {
+	-webkit-filter: $filter;
+	   -moz-filter: $filter;
+		-mz-filter: $filter;
+			filter: $filter;
+}
+
+//Attributes
+@mixin user-select($select) {
+	-webkit-user-select: $select;
+	   -moz-user-select: $select;
+		-mz-user-select: $select;
+			user-select: $select;
+}
