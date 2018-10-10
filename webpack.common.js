@@ -12,6 +12,10 @@ module.exports = {
 	},
 
 	resolve: {
+		extensions: [ '*', '.js', '.jsx' ],
+		alias: {
+  			Pages: path.resolve(__dirname, 'src/components/pages/'),
+  		},
 		modules: [
 		    path.resolve(__dirname + '/src'),
 		    path.resolve(__dirname + '/node_modules')
@@ -30,7 +34,15 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['react', 'es2015', 'stage-0']
+						presets: ['@babel/preset-react', '@babel/preset-env' ],
+						plugins: [
+							// Plugins
+							'@babel/plugin-transform-runtime',
+
+							// Experimental Plugins
+							["@babel/plugin-proposal-class-properties", { "loose": false }],
+
+						],
 					}
 				}
 			},
@@ -47,23 +59,10 @@ module.exports = {
 				            }
 				        }
 				    },
-				    /*
-				    {
-				        loader: "postcss-loader",
-				        options: {
-				            autoprefixer: {
-				                browsers: ["last 2 versions"]
-				            },
-				            plugins: () => [
-				                autoprefixer
-				            ]
-				        },
-				    },
-				    */
 				    {
 				        loader: "sass-loader",
 				        options: {}
-				    }
+				    },
 				]
 			},
 			//Media
@@ -80,7 +79,7 @@ module.exports = {
 			{
 				test: /\.json$/,
 				loader: 'json-loader',
-			}
+			},
 		]													
  	},
  	optimization: {

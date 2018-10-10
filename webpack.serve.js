@@ -21,7 +21,7 @@ module.exports = merge(common, {
 		new HtmlWebpackPlugin({
 			title: 'React-Webpack-Setup',
 			template: 'src/app_debug.html',
-			//favicon: 'www/img/favicon.ico',
+			//favicon: 'favicon.ico',
 		}),
 		new BundleAnalyzerPlugin(),
 	],
